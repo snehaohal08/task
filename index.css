@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle, #0d1b2a, #000);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #646cff;
+    font-family: "Great Vibes", cursive;
+    text-shadow: 0 0 30px #646cff;
+}
+
+.profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #646cff;
+    margin-top: 50px;
+    box-shadow: 0 0 30px #646cff;
+}
+
+.message {
+    font-size: 22px;
+    color: #ddd;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.bottom-icons {
+    font-size: 40px;
+    margin-top: 30px;
+    animation: upDown 2s ease-in-out infinite;
+}
+
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Balloons */
+.balloon {
+    position: fixed;
+    bottom: -100px;
+    z-index: 1;
+    animation: floatBalloon linear infinite;
+}
+
+.b1 {
+    left: 10%;
+    width: 25px;
+    animation-duration: 8s;
+}
+
+.b2 {
+    left: 30%;
+    width: 75px;
+    animation-duration: 8s;
+}
+
+.b3 {
+    left: 60%;
+    width: 39px;
+    animation-duration: 7s;
+}
+
+.b4 {
+    left: 85%;
+    width: 59px;
+    animation-duration: 8s;
+}
+
+.b5 {
+    left: 4%;
+    width: 65px;
+    animation-duration: 9s;
+}
+
+.b6 {
+    left: 95%;
+    width: 55px;
+    animation-duration: 9s;
+}
+
+@keyframes floatBalloon {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 110%;
+    }
+}
+
+.container, .cards, .main-gift {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Grid for Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin: 80px auto;
+}
+
+.card {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flip on hover OR when .flipped class is added via JS */
+.card:hover .card-inner,
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #646cff;
+    box-shadow: 0 5px 20px #646cff;
+}
+
+.card-front {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Music Button */
+.music-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #646cff;
+    animation: glow 2s infinite;
+    z-index: 100;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px #646cff;
+    }
+
+    50% {
+        box-shadow: 0 0 30px #646cff;
+    }
+}
+
+/* Gift Box */
+.main-gift {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+.gift-container {
+    position: relative;
+}
+
+.gift-box {
+    position: relative;
+    height: 180px;
+    width: 260px;
+    background: #ec9c4a;
+    animation: Bounce 4s ease infinite;
+}
+
+.gift-box::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 180px;
+    background: #e76f51;
+    left: 110px;
+}
+
+.click {
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    background: #ec9c4a;
+    top: -80px;
+    left: -20px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.click.active {
+    transform: translateY(-80px);
+}
+
+.click::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background: #e76f51;
+    left: 130px;
+}
+
+.click::after {
+    content: '';
+    position: absolute;
+    border-bottom: 50px solid #e76f51;
+    border-top: 50px solid #e76f51;
+    border-right: 50px solid transparent;
+    transform: rotate(-90deg);
+    top: -85px;
+    left: 125px;
+}
+
+.shadow {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    top: 190px;
+}
+
+.pdf-btn {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #646cff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: none;
+    white-space: nowrap;
+}
+
+.textno {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+    position: relative;
+    margin-top: 4px;
+    top: -90px;
+}
+
+.textno p {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #646cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+@keyframes Bounce {
+    0%, 100% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+
+/* --- MEDIA QUERIES (MOBILE RESPONSIVE) --- */
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .gift-container {
+        transform: scale(0.7);
+    }
+
+    .music-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    .text{
+        font-size: 18px;
+        
+    }
+}

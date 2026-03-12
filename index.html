@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Birthday</title>
+        <link rel="stylesheet" href="index.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <img src="./img/bir.png" class="profile" alt="Profile">
+            <h1 class="title">Happy Birthday!</h1>
+
+            <div class="music-btn" onclick="playMusic()">🎵</div>
+
+            <audio id="song" loop>
+                <source src="./audio/birthday.mp3" type="audio/mpeg">
+            </audio>
+
+            <p class="message">
+                🎂 Wishing you the most amazing day filled with love,
+                laughter, and all the happiness in the world! 🎉
+            </p>
+
+            <div class="bottom-icons">
+                🎈 🎁 🎉
+            </div>
+        </div>
+
+        <div class="ballon">
+            <img src="./img/red.png" class="balloon b1">
+            <img src="./img/ye.png" class="balloon b3">
+            <img src="./img/orange.png" class="balloon b4">
+            <img src="./img/pink.png" class="balloon b2">
+            <img src="./img/mul.png" class="balloon b6">
+            <img src="./img/blue.png" class="balloon b5">
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>🎂 Sweet Memories</h2>
+                        <p>Happy birthday to my gorgeous, smart, and loyal
+                            friend. Live your best life!🥰(solo)</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="./img/bir.png" alt="Memory">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>🎂 Sweet Memories(bff)</h2>
+                        <p>"❤️ Best friends are the people in your life who make
+                            you
+                            laugh louder, smile brighter and live better.❤️"</p>
+
+                    </div>
+                    <div class="card-back">
+                        <img src="./img/bir.png" alt="Memory">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>🎂 Sweet Memories(MARS)</h2>
+                        <p>"Live a long life with full happiness..your every birthday was joyfull..🥰"</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="./img/bir.png" alt="Memory">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>🎂 Sweet Memories(2)</h2>
+                        <p>Your Birthday are filled with <b> happiness , love❤️
+                                , health</b>...and your all dreams are comes
+                            true.</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="./img/bir.png" alt="Memory">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>🎂 Sweet Memories(2)</h2>
+                        <p>Without me Wishing you endless happiness today and
+                            always.😍</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="./img/bir.png" alt="Memory">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>🎂 Sweet Memories</h2>
+                        <p>Once Again Wish you many more Happy Birthday My Dear
+                            BFF🥰❤️‍🩹.</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="./img/bir.png" alt="Memory">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-gift">
+            <div class="gift-container">
+                <div class="shadow"></div>
+                <div class="gift-box">
+                    <div class="click" id="giftLid"></div>
+                </div>
+                <a href="./pdf/letter.pdf" target="_blank" class="pdf-btn">
+                    📄 Open Your Letter
+                </a>
+            </div>
+        </div>
+        <div class="textno">
+            <p>24,32,35,52,15,51</p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

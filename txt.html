@@ -1,0 +1,48 @@
+<div class="cards">
+
+    <div class="card">
+        <h2>🎂 Sweet Memories</h2>
+        <p>May your birthday be filled with beautiful memories and endless happiness.</p>
+    </div>
+
+    <div class="card">
+        <h2>🎁 Special Wishes</h2>
+        <p>Wishing you success, love, and joy in every step of your life.</p>
+    </div>
+
+    <div class="card">
+        <h2>🎉 Celebrate Life</h2>
+        <p>Enjoy every moment and keep shining like the star you are.</p>
+    </div>
+
+</div>
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+    transition: 0.3s;
+}
+
+.card h2{
+    color: gold;
+}
+
+.card p{
+    color: #ddd;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px gold;
+}
